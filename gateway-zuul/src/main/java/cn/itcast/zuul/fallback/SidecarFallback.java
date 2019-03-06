@@ -1,0 +1,64 @@
+package cn.itcast.zuul.fallback;
+
+import org.springframework.cloud.netflix.zuul.filters.route.FallbackProvider;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.client.ClientHttpResponse;
+import org.springframework.stereotype.Component;
+
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+/**
+ * @author shkstart
+ * @create 2019-01-18 21:06
+ */
+@Component
+public class SidecarFallback implements FallbackProvider {
+    @Override
+    public String getRoute() {
+        return "sidecar";
+    }
+
+
+    @Override
+    public ClientHttpResponse fallbackResponse(String route, Throwable cause) {
+        return new ClientHttpResponse() {
+
+            @Override
+            public HttpHeaders getHeaders() {
+                HttpHeaders headers = new HttpHeaders();
+                headers.setContentType(MediaType.APPLICATION_JSON_UTF8);
+                return headers;
+            }
+
+            @Override
+            public InputStream getBody() throws IOException {
+                return new ByteArrayInputStream(("异构调用js服务错误"+
+                        SidecarFallback.this.getRoute()).getBytes());
+            }
+
+            @Override
+            public String getStatusText() throws IOException {
+                return HttpStatus.BAD_REQUEST.getReasonPhrase();
+            }
+
+            @Override
+            public HttpStatus getStatusCode() throws IOException {
+                return HttpStatus.BAD_REQUEST;
+            }
+
+            @Override
+            public int getRawStatusCode() throws IOException {
+                return HttpStatus.BAD_REQUEST.value();
+            }
+
+            @Override
+            public void close() {
+
+            }
+        };
+    }
+}

@@ -1,0 +1,29 @@
+server:
+  port: 7903
+  #servlet:
+    #path: "*.html"
+spring:
+  application:
+      name: provider-client
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/mydatabase
+    username: root
+    password: root
+    hikari:
+      idle-timeout: 6000
+      maximum-pool-size: 30
+      minimum-idle: 10
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:password123@localhost:8761/eureka
+# mybatis 别名扫描
+#mybatis:
+ # type-aliases-package: cn.itcast.mapper
+# mapper.xml文件位置,如果没有映射文件，请注释掉
+   #mapper-locations: classpath:mappers/*.xml
+logging:
+  level:
+    com.itcast: debug
+    #org.springframework: debug

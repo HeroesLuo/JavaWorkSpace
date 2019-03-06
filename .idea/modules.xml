@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/EurakaServer/EurakaServer.iml" filepath="$PROJECT_DIR$/EurakaServer/EurakaServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaWorkSpace.iml" filepath="$PROJECT_DIR$/JavaWorkSpace.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config-client/config-client.iml" filepath="$PROJECT_DIR$/config-client/config-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config-server/config-server.iml" filepath="$PROJECT_DIR$/config-server/config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cosumer-client/consumer-client.iml" filepath="$PROJECT_DIR$/cosumer-client/consumer-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/provider3-client/demo.iml" filepath="$PROJECT_DIR$/provider3-client/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway-zuul/gateway-zuul.iml" filepath="$PROJECT_DIR$/gateway-zuul/gateway-zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/provider-client/provider-client.iml" filepath="$PROJECT_DIR$/provider-client/provider-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/provider2-client/provider2-client.iml" filepath="$PROJECT_DIR$/provider2-client/provider2-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/provider4-client/provider4-client.iml" filepath="$PROJECT_DIR$/provider4-client/provider4-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sidecar/sidecar.iml" filepath="$PROJECT_DIR$/sidecar/sidecar.iml" />
+    </modules>
+  </component>
+</project>

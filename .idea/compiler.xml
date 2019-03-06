@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="config-client" />
+        <module name="config-server" />
+        <module name="consumer-client" />
+        <module name="demo" />
+        <module name="EurakaServer" />
+        <module name="gateway-zuul" />
+        <module name="provider-client" />
+        <module name="provider2-client" />
+        <module name="provider4-client" />
+        <module name="sidecar" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="config-client" target="1.8" />
+      <module name="config-server" target="1.8" />
+      <module name="consumer-client" target="1.8" />
+      <module name="demo" target="1.8" />
+      <module name="EurakaServer" target="1.8" />
+      <module name="gateway-zuul" target="1.8" />
+      <module name="provider-client" target="1.8" />
+      <module name="provider2-client" target="1.8" />
+      <module name="provider3-client" target="1.8" />
+      <module name="provider4" target="1.8" />
+      <module name="provider4-client" target="1.8" />
+      <module name="sidecar" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
